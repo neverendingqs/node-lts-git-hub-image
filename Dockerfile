@@ -6,4 +6,5 @@ RUN apt-get update && \
   apt-get install -y curl git
 
 RUN npm i -g npm-check-updates && \
+  npm cache clean --force && \
   curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
