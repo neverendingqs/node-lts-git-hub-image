@@ -21,4 +21,5 @@ jobs:
         username: neverendingqs
         password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
         repository: ${{ env.GITHUB_REPOSITORY }}
+        add_git_labels: true
         tag_with_ref: true
