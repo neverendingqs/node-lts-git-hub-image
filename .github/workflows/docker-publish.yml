@@ -1,0 +1,19 @@
+name: Publish to Docker
+
+on:
+  schedule:
+    - cron:  '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: docker/build-push-action@v1
+      with:
+        username: neverendingqs
+        password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+        repository: ${{ env.GITHUB_REPOSITORY }}
+        tag_with_ref: true
