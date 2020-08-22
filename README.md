@@ -1,2 +1,3 @@
-# gh-action-node-update-deps-image
-Image for GitHub Action [gh-action-node-update-deps](https://github.com/marketplace/actions/update-node-dependencies).
+# node-lts-git-hub-image
+
+Docker image based on `node:lts-slim` that installs `Git` and [`hub`](https://github.com/github/hub) as well.
