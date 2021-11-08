@@ -24,3 +24,12 @@ jobs:
         add_git_labels: true
         tag_with_ref: true
         tag_with_sha: true
+    - uses: docker/build-push-action@v1
+      with:
+        username: neverendingqs
+        password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+        file: 14-slim.Dockerfile
+        repository: ${{ env.GITHUB_REPOSITORY }}
+        add_git_labels: true
+        tag_with_ref: true
+        tag_with_sha: true
