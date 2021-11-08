@@ -1,4 +1,4 @@
-FROM node:lts-slim
+FROM node:14-slim
 WORKDIR /hub
 
 RUN apt-get update && \
